@@ -3211,6 +3211,10 @@ if (typeof Slick === "undefined") {
             selectionModel.setSelectedRanges(rowsToRanges(rows));
         }
 
+        function getRow(row) {
+            return rowsCache[row];
+        }
+
 
         //////////////////////////////////////////////////////////////////////////////////////////////
         // Debug
@@ -3347,6 +3351,8 @@ if (typeof Slick === "undefined") {
             "setCellCssStyles": setCellCssStyles,
             "removeCellCssStyles": removeCellCssStyles,
             "getCellCssStyles": getCellCssStyles,
+            "getEditor": getEditor,
+            "getRow": getRow,
 
             "init": finishInitialization,
             "destroy": destroy,
